@@ -22,9 +22,10 @@ app.get("/",(Request,Response)=>{
 
 
 app.post("/",(Request,Response)=>{
-    var num1=Request.body.num1;
-    var num2=Request.body.num2;
-    Response.send("THanks For Submitting our form");
+    var num1=Number(Request.body.num1);
+    var num2=Number(Request.body.num2);
+    var result=num1+num2;
+    Response.send("Sum="+result);
 
 });
 
